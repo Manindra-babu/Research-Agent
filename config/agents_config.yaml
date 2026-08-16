@@ -1,0 +1,35 @@
+domain_focus: "general" # options: general, market_research, academic, technology
+
+agents:
+  orchestrator:
+    model_type: "reasoning" # llama-3.3-70b-versatile
+    temperature: 0.2
+    max_subtopics: 4
+
+  search:
+    model_type: "fast" # llama-3.1-8b-instant
+    temperature: 0.1
+    max_queries_per_subtopic: 3
+    max_results_per_query: 5
+    default_depth: "standard" # quick (2 sources), standard (4 sources), deep (7 sources)
+
+  analysis:
+    model_type: "reasoning"
+    temperature: 0.3
+    chunk_top_k: 6
+
+  fact_check:
+    model_type: "fast"
+    temperature: 0.1
+    min_source_threshold: 2
+
+  data:
+    model_type: "reasoning"
+    temperature: 0.2
+    enable_charts: true
+
+  writer:
+    model_type: "reasoning"
+    temperature: 0.4
+    include_citations: true
+    output_formats: ["markdown", "pdf"]

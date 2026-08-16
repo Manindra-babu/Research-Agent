@@ -1,0 +1,24 @@
+# Environment and secrets
+.env
+
+# Python cache & build outputs
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Local Vector Database & persistence
+chroma_db_data/
+
+# Generated output files
+outputs/reports/*.pdf
+outputs/reports/*.json
+
+# Virtual Environments
+venv/
+.venv/
+
+# OS metadata
+.DS_Store
+Thumbs.db
